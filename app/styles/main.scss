@@ -1370,12 +1370,6 @@ html {
     width: auto;
     max-height: 200px;
 }
-.roses{
-    position: relative;
-    background: url(../images/roses.jpg) no-repeat;
-    background-size:contain;
-    background-position: bottom right;
-}
 table#schedules { 
   margin: 0 auto;
   border-collapse: collapse;
@@ -1396,11 +1390,11 @@ table#schedules thead th { font-weight: 600; }
 table#schedules thead th, table#schedules tbody td { 
   padding: .8rem; font-size: 1.4rem;
 }
-table#miyazaki tbody td { 
+table#schedules tbody td { 
   padding: .8rem; font-size: 1.4rem;
   color: #444; background: #eee; 
 }
-table#miyazaki tbody tr:not(:last-child) { 
+table#schedules tbody tr:not(:last-child) { 
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;  
 }
