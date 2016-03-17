@@ -1355,26 +1355,19 @@ html {
     background-clip: padding-box;
     border-radius: 20px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
     .container-gallery {
         margin: 60px 0 0;
     }
 }
 .gallery-image{
     display: inline-block;
-    margin: 10px;
-    width: auto;
-    max-height: 200px;
-    overflow: hidden;
+    margin: 0 auto;
+    width: 49.7%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
     .gallery-image {
-        max-width: 200px;
-    }
-}
-@media only screen and (max-width: 450px) {
-    .gallery-image {
-        max-width: 150px;
+        width: 100%;
     }
 }
 table#schedules { 
