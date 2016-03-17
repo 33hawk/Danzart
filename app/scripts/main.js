@@ -164,4 +164,3 @@ for ( var i = 0, row; row = tablebody.rows[ i ]; i++ ) {
     col.setAttribute( "data-th", headertext[ j ] );
   }
 }
-

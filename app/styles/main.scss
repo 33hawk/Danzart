@@ -1346,7 +1346,6 @@ html {
         bottom: 30px;
     }
 }
-
 .container-gallery {
     background-color: #fff;
     padding: 40px 40px 10px;
@@ -1361,14 +1360,22 @@ html {
         margin: 60px 0 0;
     }
 }
-.gallery-images-container{
-   
-}
 .gallery-image{
     display: inline-block;
     margin: 10px;
     width: auto;
     max-height: 200px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .gallery-image {
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .gallery-image {
+        max-width: 150px;
+    }
 }
 table#schedules { 
   margin: 0 auto;
