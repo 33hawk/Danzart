@@ -1,24 +1,24 @@
 // Avoid `console` errors in browsers that lack a console.
 ( function() {
-    var method;
-    var noop = function() {};
-    var methods = [
-        "assert", "clear", "count", "debug", "dir", "dirxml", "error",
-        "exception", "group", "groupCollapsed", "groupEnd", "info", "log",
-        "markTimeline", "profile", "profileEnd", "table", "time", "timeEnd",
-        "timeline", "timelineEnd", "timeStamp", "trace", "warn"
-    ];
-    var length = methods.length;
-    var console = ( window.console = window.console || {} );
+  var method;
+  var noop = function() {};
+  var methods = [
+    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+    'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+  ];
+  var length = methods.length;
+  var console = ( window.console = window.console || {} );
 
-    while ( length-- ) {
-        method = methods[ length ];
+  while ( length-- ) {
+    method = methods[ length ];
 
         // Only stub undefined methods.
-        if ( !console[ method ] ) {
-            console[ method ] = noop;
-        }
+    if ( !console[ method ] ) {
+      console[ method ] = noop;
     }
+  }
 }() );
 
 //Header
@@ -119,13 +119,13 @@ $( function() {
 var offset = 300,
 
     //Browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-    offset_opacity = 1200,
+  offset_opacity = 1200,
 
     //Duration of the top scrolling animation (in ms)
-    scroll_top_duration = 700,
+  scroll_top_duration = 700,
 
     //Grab the "back to top" link
-    $back_to_top = $( ".cd-top" );
+  $back_to_top = $( ".cd-top" );
 
 //Hide or show the "back to top" link
 $( window ).scroll( function() {
@@ -151,9 +151,9 @@ $back_to_top.on( "click", function( event ) {
 
 //Schedules
 var headertext = [],
-headers = document.querySelectorAll( "#schedules th" ),
-tablerows = document.querySelectorAll( "#schedules th" ),
-tablebody = document.querySelector( "#schedules tbody" );
+  headers = document.querySelectorAll( "#schedules th" ),
+  tablerows = document.querySelectorAll( "#schedules th" ),
+  tablebody = document.querySelector( "#schedules tbody" );
 
 for ( var i = 0; i < headers.length; i++ ) {
   var current = headers[ i ];
