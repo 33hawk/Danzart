@@ -1369,11 +1369,9 @@ th {
 table#schedules { 
   margin: 0 auto;
   border-collapse: collapse;
-  font-family: Lora, serif;
+  font-family: 'loraregular', serif;
   font-weight: 100; 
   color: #fff;
-  text-rendering: optimizeLegibility;
-  border-radius: 5px; 
 }
 table#schedules caption { 
   font-size: 2rem; color: #444;
@@ -1395,11 +1393,10 @@ table#schedules tbody tr:not(:last-child) {
   border-bottom: 1px solid #ddd;  
 }
 
-@media screen and (max-width: 600px) {
-  table#schedules caption { background-image: none; }
+@media screen and (max-width: 700px) {
   table#schedules thead { display: none; }
   table#schedules tbody td { 
-    display: block; padding: .5rem; 
+    display: block; padding: .1rem; 
   }
   table#schedules tbody tr td:first-child { 
     background: #666; color: #fff; 
@@ -1408,7 +1405,7 @@ table#schedules tbody tr:not(:last-child) {
     content: attr(data-th); 
     font-weight: bold;
     display: inline-block;
-    width: 6rem;  
+    width: 5rem;  
   }
 }
 
@@ -1497,4 +1494,42 @@ h3 {padding: 0; margin: 0;}
   li.date p {
     margin:0;
   }
+}
+
+.day-list {
+    margin-top: 50px;
+    list-style: none;
+    border-radius: 20px;
+}
+.day-list {
+    li {
+        display: inline-block;
+        width: 30%;
+    }
+}
+.animation-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.animation-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #8c99a6;
+    transition: width .3s;
+}
+
+.animation-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+@media all and (max-width: 700px){
+    .day-list {
+        li {
+            width:100%;
+        }
+    }
 }
