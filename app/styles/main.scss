@@ -513,7 +513,6 @@ nav {
     right: 5px;
 }
 nav li {
-    float: left;
     display: inline-block;
 }
 nav li a {
@@ -901,7 +900,7 @@ th {
         font-size: .8rem;
     }
 }
-#centering {
+.centering {
     text-align: center;
 }
 .copyright {
@@ -1405,7 +1404,7 @@ table#schedules tbody tr:not(:last-child) {
     content: attr(data-th); 
     font-weight: bold;
     display: inline-block;
-    width: 5rem;  
+    width: 6rem;  
   }
 }
 
