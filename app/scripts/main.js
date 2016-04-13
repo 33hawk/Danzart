@@ -39,28 +39,28 @@ $( function() {
     return check;
 
   }
-  var clickevent = mobilecheck() ? "touchstart" : "click";
+  var clickevent = mobilecheck() ? 'touchstart' : 'click';
 
-  var items = $( ".slide" );
-  var content = $( ".content" );
+  var items = $( '.slide' );
+  var content = $( '.content' );
 
   function open() {
 
-    $( items ).removeClass( "close" ).addClass( "open" );
+    $( items ).removeClass( 'close' ).addClass( 'open' );
 
   }
 
   function close() {
 
-    $( items ).removeClass( "open" ).addClass( "close" );
+    $( items ).removeClass( 'open' ).addClass( 'close' );
 
   }
 
-  $( "#navToggle" ).on( clickevent, function() {
+  $( '#navToggle' ).on( clickevent, function() {
 
     event.stopPropagation();
     event.preventDefault();
-    if ( content.hasClass( "open" ) ) {
+    if ( content.hasClass( 'open' ) ) {
 
       close();
 
@@ -73,7 +73,7 @@ $( function() {
   } );
   content.click( function() {
 
-    if ( content.hasClass( "open" ) ) {
+    if ( content.hasClass( 'open' ) ) {
 
       close();
 
@@ -86,21 +86,21 @@ $( function() {
 //Smooth scrolling
 $( function() {
 
-  $( "a[href*=#]:not([href=#])" ).click( function( e ) {
+  $( 'a[href*=#]:not([href=#])' ).click( function( e ) {
 
     e.preventDefault(); {
 
-      if ( location.pathname.replace( /^\//, "" ) === this.pathname.replace( /^\//, "" ) && location.hostname === this.hostname ) {
+      if ( location.pathname.replace( /^\//, '' ) === this.pathname.replace( /^\//, '' ) && location.hostname === this.hostname ) {
         var target = $( this.hash );
-        target = target.length ? target : $( "[name=" + this.hash.slice( 1 ) + "]" );
+        target = target.length ? target : $( '[name=" + this.hash.slice( 1 ) + "]' );
         if ( target.length ) {
 
-          $( "html,body" ).animate( {
+          $( 'html,body' ).animate( {
             scrollTop: target.offset().top
           }, 1000 );
-          if ( matchMedia( "only screen and (max-width: 1100px)" ).matches ) {
+          if ( matchMedia( 'only screen and (max-width: 1100px)' ).matches ) {
 
-            $( "html,body" ).animate( {
+            $( 'html,body' ).animate( {
               scrollTop: target.offset().top - 60
             }, 1000 );
             return false;
@@ -125,25 +125,25 @@ var offset = 300,
   scroll_top_duration = 700,
 
     //Grab the "back to top" link
-  $back_to_top = $( ".cd-top" );
+  $back_to_top = $( '.cd-top' );
 
 //Hide or show the "back to top" link
 $( window ).scroll( function() {
 
-  ( $( this ).scrollTop() > offset ) ? $back_to_top.addClass( "cd-is-visible" ) : $back_to_top.removeClass( "cd-is-visible cd-fade-out" );
+  ( $( this ).scrollTop() > offset ) ? $back_to_top.addClass( 'cd-is-visible' ) : $back_to_top.removeClass( 'cd-is-visible cd-fade-out' );
   if ( $( this ).scrollTop() > offset_opacity ) {
 
-    $back_to_top.addClass( "cd-fade-out" );
+    $back_to_top.addClass( 'cd-fade-out' );
 
   }
 
 } );
 
 //Smooth scroll to top
-$back_to_top.on( "click", function( event ) {
+$back_to_top.on( 'click', function( event ) {
 
   event.preventDefault();
-  $( "body,html" ).animate( {
+  $( 'body,html' ).animate( {
     scrollTop: 0
   }, scroll_top_duration );
 
@@ -151,16 +151,16 @@ $back_to_top.on( "click", function( event ) {
 
 //Schedules
 var headertext = [],
-  headers = document.querySelectorAll( "#schedules th" ),
-  tablerows = document.querySelectorAll( "#schedules th" ),
-  tablebody = document.querySelector( "#schedules tbody" );
+  headers = document.querySelectorAll( '#schedules th' ),
+  tablerows = document.querySelectorAll( '#schedules th' ),
+  tablebody = document.querySelector( '#schedules tbody' );
 
 for ( var i = 0; i < headers.length; i++ ) {
   var current = headers[ i ];
-  headertext.push( current.textContent.replace( /\r?\n|\r/, "" ) );
+  headertext.push( current.textContent.replace( /\r?\n|\r/, '' ) );
 }
 for ( var i = 0, row; row = tablebody.rows[ i ]; i++ ) {
   for ( var j = 0, col; col = row.cells[ j ]; j++ ) {
-    col.setAttribute( "data-th", headertext[ j ] );
+    col.setAttribute( 'data-th', headertext[ j ] );
   }
 }
