@@ -470,9 +470,7 @@ a {
 .container {
     overflow: hidden;
     background-color: #000;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 header {
     height: 60px;
@@ -879,7 +877,7 @@ th {
         font-size: 1.8rem;
     }
 }
-#strong {
+.strong {
     font-family: 'lorabold',serif;
 }
 .subtitle {
@@ -887,7 +885,7 @@ th {
 }
 @media only screen and (max-width: 400px) {
     .subtitle {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 .text {
@@ -922,7 +920,7 @@ th {
     height: 100%;
     z-index: 10;
 }
-@-webkit-keyframes blink {
+@keyframes blink {
     from {
         opacity: 1.0;
     }
@@ -931,10 +929,10 @@ th {
     }
 }
 .blink {
-    -webkit-animation-name: blink;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
-    -webkit-animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+    animation-duration: 1s;
 }
 .space{
     word-spacing: 1.5em;
@@ -1234,7 +1232,7 @@ th {
 .syllabus-intro a:active {
     color: #BFE2FF;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
     .syllabus-intro {
         margin: 60px 0 0;
     }
@@ -1245,7 +1243,7 @@ th {
     margin: 5%;
     background-color: #fff;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
     .table-wrapper {
         border: none;
         margin: 0;
@@ -1258,7 +1256,7 @@ th {
     margin: 10px 10%;
     columns: 2;
 }
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 1100px) {
     .syllabus-wrapper {
         columns: 1;
         margin: 0;
@@ -1273,7 +1271,7 @@ th {
     border-radius: 20px;
     padding: 30px 30px 10px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
     .syllabus-information {
         margin: 20px 0 0;
     }
@@ -1525,7 +1523,7 @@ h3 {padding: 0; margin: 0;}
     width: 100%;
     //transition: width .3s;
 }
-@media all and (max-width: 700px){
+@media all and (max-width: 800px){
     .day-list {
         li {
             width:100%;
