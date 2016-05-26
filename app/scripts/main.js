@@ -1,7 +1,7 @@
 // Avoid `console` errors in browsers that lack a console.
-( function() {
+(function() {
   var method;
-  var noop = function() {};
+  var noop = function () {};
   var methods = [
     'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
     'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
@@ -9,17 +9,28 @@
     'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
   ];
   var length = methods.length;
-  var console = ( window.console = window.console || {} );
+  var console = (window.console = window.console || {});
 
-  while ( length-- ) {
-    method = methods[ length ];
+  while (length--) {
+    method = methods[length];
 
         // Only stub undefined methods.
-    if ( !console[ method ] ) {
-      console[ method ] = noop;
+    if (!console[method]) {
+      console[method] = noop;
     }
   }
-}() );
+}());
+//HTML5 Video Android phones
+function myOnload() {
+  var ua = navigator.userAgent;
+  if (typeof ua != 'undefined' && ua.match(/Android.* 2\.[0-2](\.[0-9]+)*[^.0-9]/i) !== null) {
+    var vid = document.getElementById('video');
+    vid.addEventListener('click', function() {
+      vid.play();
+    }, false);
+  }
+}
+window.onload = myOnload;
 //header
 $(function() {
   function mobilecheck() {
@@ -134,11 +145,11 @@ var headertext = [],
   tablebody = document.querySelector( '#schedules tbody' );
 
 for ( var i = 0; i < headers.length; i++ ) {
-  var current = headers[ i ];
+  var current = headers[i];
   headertext.push( current.textContent.replace( /\r?\n|\r/, '' ) );
 }
-for ( var i = 0, row; row = tablebody.rows[ i ]; i++ ) {
-  for ( var j = 0, col; col = row.cells[ j ]; j++ ) {
-    col.setAttribute( 'data-th', headertext[ j ] );
+for ( var i = 0, row; row = tablebody.rows[i]; i++ ) {
+  for ( var j = 0, col; col = row.cells[j]; j++ ) {
+    col.setAttribute( 'data-th', headertext[j] );
   }
 }
