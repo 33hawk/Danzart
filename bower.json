@@ -1,13 +1,13 @@
 {
-  "name": "danzart-zg",
+  "name": "danzart",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.4",
-    "modernizr": "~2.8.3",
-    "strip": "^1.6.2"
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1"
   },
   "devDependencies": {
-    "chai": "~3.5.0",
-    "mocha": "~2.4.5"
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "strip": "^1.6.3"
   }
 }

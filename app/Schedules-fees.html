@@ -3,31 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Schedules & fees</title>
   <meta name="description" content="danzart ballet studio schedules and fees">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="alternate" hreflang="en">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- build:css(.) styles/vendor.css -->
+  <title>Schedules & fees</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/timetable.js/dist/styles/timetablejs.css">
   <!-- endbower -->
   <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
-  <!-- endbuild -->
-  <!-- build:js scripts/vendor/modernizr.js -->
-  <script async src="/bower_components/modernizr/modernizr.js"></script>
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
 </head>
 
 <body>
   <!--[if lt IE 10]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
   <div class="container">
     <header class="slide">
       <ul id="navToggle" class="burger slide">
@@ -525,9 +526,9 @@
 
                 </ul>
               </li>
-            <h3 class="subtitle">Important Note</h3>
-            <p class="text">Schedules are subject to change depending on enrollment and/or instructor’s availability. All Dance and Fitness Programs are subject to minimum and maximum enrollment.</p>
-            <span class="text"><sup></sup></span>
+              <h3 class="subtitle">Important Note</h3>
+              <p class="text">Schedules are subject to change depending on enrollment and/or instructor’s availability. All Dance and Fitness Programs are subject to minimum and maximum enrollment.</p>
+              <span class="text"><sup></sup></span>
             </ul>
             <br><br>
 
@@ -721,9 +722,9 @@
 
                 </ul>
               </li>
-            <h3 class="subtitle">Important Note</h3>
-            <p class="text">Schedules are subject to change depending on enrollment and/or instructor’s availability. All Dance and Fitness Programs are subject to minimum and maximum enrollment.</p>
-            <span class="text"><sup></sup></span>
+              <h3 class="subtitle">Important Note</h3>
+              <p class="text">Schedules are subject to change depending on enrollment and/or instructor’s availability. All Dance and Fitness Programs are subject to minimum and maximum enrollment.</p>
+              <span class="text"><sup></sup></span>
             </ul>
 
             <div class="timetable"></div>
@@ -830,36 +831,54 @@
       </ul>
     </div>
   </div>
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/timetable.js/dist/scripts/timetable.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    
-
-    <!-- build:js(.tmp) scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QM42G"
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QM42G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5QM42G');</script>
-<!-- End Google Tag Manager -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-74673100-1');ga('send','pageview');
-    </script>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5QM42G');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script>
+    (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function() {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-74673100-1');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>
