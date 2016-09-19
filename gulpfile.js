@@ -67,7 +67,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
+  return gulp.src(['app/images/**/*', 'bower_components/strip/dist/css/strip-skins/strip/**/*'])
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
