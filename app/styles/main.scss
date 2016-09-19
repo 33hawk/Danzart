@@ -827,8 +827,6 @@ th {
 .dd {
     color: #fff;
     transition: 1s;
-}
-.dd:hover {
     text-shadow: 0 0 0.1em, 0 0 0.3em;
 }
 .float-pics {
@@ -865,7 +863,6 @@ th {
                  0 5px hsl(0,0%,65%),
                  0 5px 10px black;
 }
-.title:hover,
 .subtitle:hover,
 .subtitle-strong:hover {
     color: #DBBAB6;
@@ -914,6 +911,7 @@ th {
     /* 16:9 */
     padding-top: 0;
     height: 0;
+    background: black;
 }
 .videoWrapper video {
     position: absolute;
@@ -922,6 +920,8 @@ th {
     width: 100%;
     height: 100%;
     z-index: 10;
+    border: 1px solid hsla(0, 0%, 0%, 1);
+    opacity: .7;
 }
 @keyframes blink {
     from {
@@ -973,7 +973,6 @@ th {
     border-radius: 20px;
     border: 10px solid hsla(0,0%,100%,.5);
     background: white;
-    background-clip: padding-box;
 }
 .home-several{
     box-shadow: 0 -2px 67px -4px rgba(0,0,0,1);
