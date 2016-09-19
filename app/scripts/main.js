@@ -20,7 +20,7 @@
     }
   }
 } ());
-//HTML5 Video Android phones
+// Should stream html video from cell phones !chrome???
 function myOnload() {
   var ua = navigator.userAgent;
   if (typeof ua != 'undefined' && ua.match(/Android.* 2\.[0-2](\.[0-9]+)*[^.0-9]/i) !== null) {
@@ -32,6 +32,7 @@ function myOnload() {
 }
 window.onload = myOnload;
 //header
+
 $(function () {
   function mobilecheck() {
     var check = false;
@@ -55,7 +56,7 @@ $(function () {
     $(items).removeClass('open').addClass('close');
   }
 
-  $('#navToggle').on(clickevent, function () {
+  $('#navToggle').on(clickevent, function (event) {
     event.stopPropagation();
     event.preventDefault();
     if (content.hasClass('open')) {
@@ -71,6 +72,7 @@ $(function () {
   });
 
 });
+
 
 //Smooth scrolling
 $(function () {
@@ -147,9 +149,4 @@ var headertext = [],
 for (var i = 0; i < headers.length; i++) {
   var current = headers[i];
   headertext.push(current.textContent.replace(/\r?\n|\r/, ''));
-}
-for (var i = 0, row; row = tablebody.rows[i]; i++) {
-  for (var j = 0, col; col = row.cells[j]; j++) {
-    col.setAttribute('data-th', headertext[j]);
-  }
 }
