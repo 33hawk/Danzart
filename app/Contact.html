@@ -6,7 +6,6 @@
   <meta name="description" content="Contact information for the Zagreb Ballet School including address, phone numbers and emails.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact</title>
-
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="shortcut icon" href="favicon.ico">
@@ -14,11 +13,9 @@
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
-
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
-
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
@@ -28,7 +25,6 @@
   <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
   <div class="container">
     <header class="slide">
       <ul id="navToggle" class="burger slide">
@@ -60,48 +56,45 @@
           <div class="contact-wrapper" itemtype="http://schema.org/LocalBusiness">
             <img class="responsive-img" itemprop="logo" src="images/Danzartlgo.jpg" alt="logo">
             <h2 class="subtitle blink centering">Enroll now, call:</h2>
-            <p class="text centering"> <a href="tel:+385912777267" itemprop="telephone">+385 (0)91 2777 267</a></p>
+            <p class="text centering"> <a href="tel:+385912777267" itemprop="telephone">+385 (0)91 2777 267</a><br>Monday-Friday: 09:00 - 18:00h.<br>Saturday: 10:00 - 16:00h.</p>
             <h2 class="subtitle centering">Email:</h2>
             <p class="text centering"><a href="mailto:danzart.hr@gmail.com" itemprop="email">danzart.hr@gmail.com</a></p>
-            <div class="centering">
-              <a href="https://www.facebook.com/Danzart-1654817664779929/"><img src="images/facebook.svg" alt="Idi na facebook" width="80px" height="100" ></a>
-              <a href="https://plus.google.com/+Danzart-zg"><img src="images/google.svg" alt="Idi na google+" width="100px" height="100px"></a>
+            <div class="social-links">
+              <a href="https://www.instagram.com/danzart.zg/"><img src="images/instagram.svg" alt="go to google+" width="80px" height="80px"></a>
+              <a href="https://www.facebook.com/Danzart-1654817664779929/"><img src="images/facebook.svg" alt="go to facebook" width="80px" height="100"></a>
+              <a href="https://plus.google.com/+Danzart-zg"><img src="images/google.svg" alt="go to google+" width="100px" height="100px"></a>
             </div>
             <h2 class="title">Address:</h2>
-            <h3 class="text">First Floor<br><span itemprop="streetAddress">Ul. Pavla Hatza 12</span><br><span itemprop="postalCode">10000</span> <span itemprop="addressLocality">Zagreb</span><br><span itemprop="addressRegion">Croatia</span></h3>
+            <h3 class="text">First Floor<br><span itemprop="streetAddress">Ul. Pavla Hatza 12</span><br><span itemprop="postalCode">10000</span>
+              <span
+                itemprop="addressLocality">Zagreb</span><br><span itemprop="addressRegion">Croatia</span></h3>
             <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.1850375924973!2d15.97876641556899!3d45.807552479106455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eb53fea9cad55d!2sDanzart+d.o.o.!5e0!3m2!1ses!2sus!4v1458150462224"
               height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <div class="fb-like" data-href="https://www.facebook.com/Danzart-1654817664779929/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="https://www.facebook.com/Danzart-1654817664779929/" data-layout="box_count" data-action="like"
+              data-show-faces="true" data-share="true"></div>
             <hr>
-            <p class="copyright">Copyright &copy; 2016 <span itemprop="name">DanZart</span> d.o.o.</p>
+            <p class="copyright">Copyright &copy; 2016-2017 <span itemprop="name">DanZart</span> d.o.o.</p>
           </div>
         </li>
-
       </ul>
     </div>
   </div>
-
+  <div id="fb-root"></div>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QM42G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5QM42G');
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
-  <!-- End Google Tag Manager -->
+  <!-- build:js(.tmp) scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b, o, i, l, e, r) {
       b.GoogleAnalyticsObject = l;
@@ -120,21 +113,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
   <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
   <script type="text/javascript">
-    window.cookieconsent_options = {
-      "message": "This website uses cookies to ensure you get the best experience on our website",
-      "dismiss": "Got it!",
-      "learnMore": "More info",
-      "link": null,
-      "theme": "dark-bottom"
-    };
-  </script>
-
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+      window.cookieconsent_options = {
+        "message": "This website uses cookies to ensure you get the best experience on our website",
+        "dismiss": "Got it!",
+        "learnMore": "More info",
+        "link": null,
+        "theme": "dark-bottom"
+      };
+    </script>
   <!-- End Cookie Consent plugin -->
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -142,5 +134,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
-
 </html>

@@ -12,7 +12,6 @@
   <link rel="shortcut icon" href="favicon.ico">
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="../bower_components/strip/dist/css/strip.css">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -158,7 +157,7 @@
               </a>
             </div>
             <hr> <a href="#0" class="cd-top">Top</a>
-            <p class="copyright">Copyright &copy; 2016 DanZart d.o.o.</p>
+            <p class="copyright">Copyright &copy; 2016-2017 DanZart d.o.o.</p>
           </div>
         </li>
       </ul>
@@ -166,26 +165,6 @@
   </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QM42G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5QM42G');
-  </script>
-  <!-- End Google Tag Manager -->
   <script>
     (function(b, o, i, l, e, r) {
       b.GoogleAnalyticsObject = l;
@@ -204,30 +183,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
   <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
   <script type="text/javascript">
-    window.cookieconsent_options = {
-      "message": "This website uses cookies to ensure you get the best experience on our website",
-      "dismiss": "Got it!",
-      "learnMore": "More info",
-      "link": null,
-      "theme": "dark-bottom"
-    };
-  </script>
-
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+      window.cookieconsent_options = {
+        "message": "This website uses cookies to ensure you get the best experience on our website",
+        "dismiss": "Got it!",
+        "learnMore": "More info",
+        "link": null,
+        "theme": "dark-bottom"
+      };
+    </script>
   <!-- End Cookie Consent plugin -->
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
-  <!-- build:js scripts/../bower_components/strip/dist/js/strip.pkgd.js -->
-  <script src="../bower_components/strip/dist/js/strip.pkgd.js"></script>
-  <!-- endbuild -->
 </body>
-
 </html>
