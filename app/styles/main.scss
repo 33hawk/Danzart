@@ -1070,6 +1070,7 @@ th {
   border-radius: 20px;
   border: 10px solid hsla(0, 0%, 100%, .5);
   background: white;
+  position: relative;
 }
 
 .home-several {
@@ -2295,4 +2296,55 @@ all and (max-height: 375px) and (max-width: 667px) {
 .strp-window-skin-strip.strp-no-svg .strp-close .strp-close-icon {
   background-image: url('../images/close.png');
   opacity: 1;
+}
+
+// slider home
+.sli {
+  position: relative;
+  height: auto;
+}
+.item-1, 
+.item-2, 
+.item-3 {
+	position: relative;
+  display: block;
+	
+  
+  width: 50%;
+  height: auto;
+  font-size: 2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
 }

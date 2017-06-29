@@ -1262,7 +1262,7 @@ for (var headertext = [], headers = document.querySelectorAll('#schedules th'), 
 
     function Page() {
       return this.initialize.apply(this, _slice.call(arguments));
-    };
+    }
     $.extend(Page.prototype, {
       initialize: function (view, position, total) {
         this.view = view;
