@@ -1,31 +1,79 @@
 'use strict';
 
-// service worker
 
-$(document).ready(function() {
-  $(document).delegate('.open', 'click', function(event){
-    $(this).addClass('oppenned');
-    event.stopPropagation();
-  });
-  $(document).delegate('body', 'click', function(event) {
-    $('.open').removeClass('oppenned');
-  });
-  $(document).delegate('.cls', 'click', function(event){
-    $('.open').removeClass('oppenned');
-    event.stopPropagation();
-  });
+$(document).ready(function () {
+    //rotation speed and timer
+    var speed = 5000;
+    
+    var run = setInterval(rotate, speed);
+    var slides = $('.text-slide');
+    var container = $('#slides ul');
+    var elm = container.find(':first-child').prop('tagName');
+    var item_width = container.width();
+    var previous = 'prev'; //id of previous button
+    var next = 'next'; //id of next button
+    slides.width(item_width); //set the slides to the correct pixel width
+    container.parent().width(item_width);
+    container.width(slides.length * item_width); //set the slides container to the correct total width
+    container.find(elm + ':first').before(container.find(elm + ':last'));
+    resetSlides();
+    
+    
+    //if user clicked on prev button
+    
+    $('#buttons a').click(function (e) {
+        //slide the item
+        
+        if (container.is(':animated')) {
+            return false;
+        }
+        if (e.target.id == previous) {
+            container.stop().animate({
+                'left': 0
+            }, 1500, function () {
+                container.find(elm + ':first').before(container.find(elm + ':last'));
+                resetSlides();
+            });
+        }
+        
+        if (e.target.id == next) {
+            container.stop().animate({
+                'left': item_width * -2
+            }, 1500, function () {
+                container.find(elm + ':last').after(container.find(elm + ':first'));
+                resetSlides();
+            });
+        }
+        
+        //cancel the link behavior            
+        return false;
+        
+    });
+    
+    //if mouse hover, pause the auto rotation, otherwise rotate it    
+    container.parent().mouseenter(function () {
+        clearInterval(run);
+    }).mouseleave(function () {
+        run = setInterval(rotate, speed);
+    });
+    
+    
+    function resetSlides() {
+        //and adjust the container so current is in the frame
+        container.css({
+            'left': -1 * item_width
+        });
+    }
+    
 });
+//a simple function to click next link
+//a timer will call this function, and the rotation will begin
 
-if ('serviceWorker' in navigator) {
- console.log('Service Worker is supported');
- navigator.serviceWorker.register('../sw.js').then(function(reg) {
-   console.log(':^)', reg);
-   // TODO
- }).catch(function(err) {
-   console.log(':^(', err);
- });
+function rotate() {
+    $('#next').click();
 }
-//end service worker
+
+
 
 function myOnload() {
   var e = navigator.userAgent;

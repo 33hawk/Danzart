@@ -975,7 +975,7 @@ th {
 
 .text {
   font-family: 'loraregular';
-  font-size: 1.4em;
+  font-size: 1.5em;
   line-height: 1.7;
 }
 
@@ -2299,52 +2299,122 @@ all and (max-height: 375px) and (max-width: 667px) {
 }
 
 // slider home
-.sli {
-  position: relative;
-  height: auto;
+.text-slider-container {
+  width: 100vw;
+  background: rgba(0, 0, 0, .1);
+  margin: 0;
+  padding: 0;
+  margin-left: -20px;
 }
-.item-1, 
-.item-2, 
-.item-3 {
-	position: relative;
-  display: block;
-	
+#carousel {
+position: relative;
+width:60%;
+margin:0 auto;
+}
+
+#slides {
+overflow: hidden;
+position: relative;
+width: 100%;
+height: auto;
+}
+
+#slides ul {
+list-style: none;
+width:100%;
+height:auto;
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+ #slides li {
+width:100%;
+height:auto;
+float:left;
+text-align: center;
+position: relative;
+}
+/* Styling for prev and next buttons */
+.btn-bar{
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top:5px;
+    width: 100%;
+}
+
+ #buttons {
+padding:0 0 5px 0;
+float:right;
+}
+
+#buttons a {
+text-align:center;
+display:block;
+font-size:5em;
+float:left;
+outline:0;
+margin:0 30px;
+color:#b14943;
+text-decoration:none;
+display:block;
+padding:9px;
+width:35px;
+}
+
+a#prev:hover, a#next:hover {
+color:brown;
+text-shadow:.5px 0px #b14943;  
+}
+
+.quote-phrase, .quote-author {
+display: table-cell;
+vertical-align: middle;
+padding: 5px 20px;
+}
+
+.quote-phrase {
+height: 200px;
+font-size:24px;
+color:black;
+font-style:italic;
+text-shadow:.5px 0px #b14943;  
+}
+
+.quote-marks {
+font-size:30px;
+padding:0 3px 3px;
+position:inherit;
+}
+
+.quote-author {
+color:#b14943;
+height: 30px;
+}
+
+.quoteContainer, .authorContainer {
+display: table;
+width: 100%;
+}
+.btn-text-slider, .btn-text-slider:active {
+  color: black;
+  background: rgba(0, 0, 0, .3);
+  border:  2px groove black;
+  padding: 7px;
+}
+.btn-text-slider:hover {
+  color: white;
+}
+.testimony {
+  padding: 10px;
+  border: 2px groove gray;
+}
+
+.background {
   
-  width: 50%;
-  height: auto;
-  font-size: 2em;
-
-	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-}
-
-.item-1{
-	animation-name: anim-1;
-}
-
-.item-2{
-	animation-name: anim-2;
-}
-
-.item-3{
-	animation-name: anim-3;
-}
-
-@keyframes anim-1 {
-	0%, 8.3% { left: -100%; opacity: 0; }
-  8.3%,25% { left: 25%; opacity: 1; }
-  33.33%, 100% { left: 110%; opacity: 0; }
-}
-
-@keyframes anim-2 {
-	0%, 33.33% { left: -100%; opacity: 0; }
-  41.63%, 58.29% { left: 25%; opacity: 1; }
-  66.66%, 100% { left: 110%; opacity: 0; }
-}
-
-@keyframes anim-3 {
-	0%, 66.66% { left: -100%; opacity: 0; }
-  74.96%, 91.62% { left: 25%; opacity: 1; }
-  100% { left: 110%; opacity: 0; }
+  background: url(../images/dlogo.jpg) no-repeat;
+  background-size: 50vh ;
+  background-color: #ffffff;
 }
