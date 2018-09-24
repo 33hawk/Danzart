@@ -1221,7 +1221,7 @@ th {
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1600px) {
   .attire-Swrapper {
     margin: 60px 0 0;
   }
@@ -1558,64 +1558,6 @@ th {
   }
 }
 
-table#schedules {
-  margin: 0 auto;
-  border-collapse: collapse;
-  font-family: 'loraregular', serif;
-  font-weight: 100;
-  color: #fff;
-}
-
-table#schedules caption {
-  font-size: 2rem;
-  color: #444;
-  margin: 1rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center left, center right;
-}
-
-table#schedules thead th {
-  font-weight: 600;
-}
-
-table#schedules thead th,
-table#schedules tbody td {
-  padding: .8rem;
-  font-size: 1.4rem;
-}
-
-table#schedules tbody td {
-  padding: .8rem;
-  font-size: 1.4rem;
-  color: #444;
-  background: #eee;
-}
-
-table#schedules tbody tr:not(:last-child) {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-@media screen and (max-width: 700px) {
-  table#schedules thead {
-    display: none;
-  }
-  table#schedules tbody td {
-    display: block;
-    padding: .1rem;
-  }
-  table#schedules tbody tr td:first-child {
-    background: #666;
-    color: #fff;
-  }
-  table#schedules tbody td:before {
-    content: attr(data-th);
-    font-weight: bold;
-    display: inline-block;
-    width: 6rem;
-  }
-}
 
 ul.main {
   list-style: none;
@@ -1683,7 +1625,7 @@ h3 {
   margin-left: 70px;
 }
 
-@media all and (max-width: 880px) {
+@media all and (max-width: 1100px) {
   .date {
     width: 100%;
     border-bottom: 1px solid #ccc;

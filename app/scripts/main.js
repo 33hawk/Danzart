@@ -2,75 +2,75 @@
 
 
 $(document).ready(function () {
-    //rotation speed and timer
-    var speed = 5000;
-    
-    var run = setInterval(rotate, speed);
-    var slides = $('.text-slide');
-    var container = $('#slides ul');
-    var elm = container.find(':first-child').prop('tagName');
-    var item_width = container.width();
-    var previous = 'prev'; //id of previous button
-    var next = 'next'; //id of next button
-    slides.width(item_width); //set the slides to the correct pixel width
-    container.parent().width(item_width);
-    container.width(slides.length * item_width); //set the slides container to the correct total width
-    container.find(elm + ':first').before(container.find(elm + ':last'));
-    resetSlides();
-    
-    
-    //if user clicked on prev button
-    
-    $('#buttons a').click(function (e) {
-        //slide the item
-        
-        if (container.is(':animated')) {
-            return false;
-        }
-        if (e.target.id == previous) {
-            container.stop().animate({
-                'left': 0
-            }, 1500, function () {
-                container.find(elm + ':first').before(container.find(elm + ':last'));
-                resetSlides();
-            });
-        }
-        
-        if (e.target.id == next) {
-            container.stop().animate({
-                'left': item_width * -2
-            }, 1500, function () {
-                container.find(elm + ':last').after(container.find(elm + ':first'));
-                resetSlides();
-            });
-        }
-        
-        //cancel the link behavior            
-        return false;
-        
-    });
-    
-    //if mouse hover, pause the auto rotation, otherwise rotate it    
-    container.parent().mouseenter(function () {
-        clearInterval(run);
-    }).mouseleave(function () {
-        run = setInterval(rotate, speed);
-    });
-    
-    
-    function resetSlides() {
-        //and adjust the container so current is in the frame
-        container.css({
-            'left': -1 * item_width
-        });
+  //rotation speed and timer
+  var speed = 5000;
+
+  var run = setInterval(rotate, speed);
+  var slides = $('.text-slide');
+  var container = $('#slides ul');
+  var elm = container.find(':first-child').prop('tagName');
+  var item_width = container.width();
+  var previous = 'prev'; //id of previous button
+  var next = 'next'; //id of next button
+  slides.width(item_width); //set the slides to the correct pixel width
+  container.parent().width(item_width);
+  container.width(slides.length * item_width); //set the slides container to the correct total width
+  container.find(elm + ':first').before(container.find(elm + ':last'));
+  resetSlides();
+
+
+  //if user clicked on prev button
+
+  $('#buttons a').click(function (e) {
+    //slide the item
+
+    if (container.is(':animated')) {
+      return false;
     }
-    
+    if (e.target.id == previous) {
+      container.stop().animate({
+        'left': 0
+      }, 1500, function () {
+        container.find(elm + ':first').before(container.find(elm + ':last'));
+        resetSlides();
+      });
+    }
+
+    if (e.target.id == next) {
+      container.stop().animate({
+        'left': item_width * -2
+      }, 1500, function () {
+        container.find(elm + ':last').after(container.find(elm + ':first'));
+        resetSlides();
+      });
+    }
+
+    //cancel the link behavior            
+    return false;
+
+  });
+
+  //if mouse hover, pause the auto rotation, otherwise rotate it    
+  container.parent().mouseenter(function () {
+    clearInterval(run);
+  }).mouseleave(function () {
+    run = setInterval(rotate, speed);
+  });
+
+
+  function resetSlides() {
+    //and adjust the container so current is in the frame
+    container.css({
+      'left': -1 * item_width
+    });
+  }
+
 });
 //a simple function to click next link
 //a timer will call this function, and the rotation will begin
 
 function rotate() {
-    $('#next').click();
+  $('#next').click();
 }
 
 
@@ -120,21 +120,6 @@ function myOnload() {
     }
   });
 });
-var offset = 300,
-  offset_opacity = 1200,
-  scroll_top_duration = 1000,
-  $back_to_top = $('.cd-top');
-$(window).scroll(function () {
-  $(this).scrollTop() > offset ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out'), $(this).scrollTop() > offset_opacity && $back_to_top.addClass('cd-fade-out')
-}), $back_to_top.on('click', function (e) {
-  e.preventDefault(), $('body,html').animate({
-    scrollTop: 0
-  }, scroll_top_duration)
-});
-for (var headertext = [], headers = document.querySelectorAll('#schedules th'), tablerows = document.querySelectorAll('#schedules th'), tablebody = document.querySelector('#schedules tbody'), i = 0; i < headers.length; i++) {
-  var current = headers[i];
-  headertext.push(current.textContent.replace(/\r?\n|\r/, ''));
-}
 
 
 /*!
